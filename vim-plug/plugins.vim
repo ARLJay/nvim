@@ -12,14 +12,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'sheerun/vim-polyglot'
     " Tree-sitter improved highlighting
     Plug 'nvim-treesitter/nvim-treesitter'
-    " Rainbow brackets
-    Plug 'p00f/nvim-ts-rainbow'
     "Start screen with recents
     Plug 'mhinz/vim-startify'
-   " " Ranger dependency
-   " Plug 'rbgrouleff/bclose.vim'
-    " Ranger
-    Plug 'kevinhwang91/rnvimr'
     " Colour highlighting
     Plug 'ap/vim-css-color'
     "Fugitive git
@@ -27,6 +21,14 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Fugitive gitlab
     Plug 'shumphrey/fugitive-gitlab.vim'
     let g:fugitive_gitlab_domains = ['https://stgit.dcs.gla.ac.uk/']
+    "Feline
+    Plug 'feline-nvim/feline.nvim'
+    " web devicons
+    Plug 'kyazdani42/nvim-web-devicons'
+    " Autocomplete
+    Plug 'ms-jpq/coq_nvim'
+    " Telescope
+    Plug 'nvim-telescope/telescope.nvim'
 call plug#end()
 
 " Key mappings
@@ -34,11 +36,17 @@ inoremap { {}<Left>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
 
-" Ranger mappings
-map <silent> \f :RnvimrToggle <ENTER>
 
-let g:rnvimr_enable_picker = 1
+" Plug reload mappings
+map \p :source ~/.config/nvim/vim-plug/plugins.vim <ENTER>
+
+" Telescope
+map \f :Telescope <ENTER>
 
 " Tab mappings
 noremap <silent> <c-h> gT
 noremap <silent> <c-l> gt
+
+set tgc
+lua require('feline').setup()
+:COQnow -s
