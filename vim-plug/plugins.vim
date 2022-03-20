@@ -49,4 +49,4 @@ noremap <silent> <c-l> gt
 
 set tgc
 lua require('feline').setup()
-:COQnow -s
+let g:coq_settings = { 'auto_start': 'shut-up' }
