@@ -1,7 +1,16 @@
+vim.cmd([[
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost plugins.lua source <afile> | PackerCompile
+  augroup end
+]])
+
 return require('packer').startup({
 	function(use)
+
+    use('wbthomason/packer.nvim')
 --    " Better Syntax Support
-    use ('sheerun.vim-polyglot')
+    use ('sheerun/vim-polyglot')
 
 --    " Tree-sitter improved highlighting
     use ('nvim-treesitter/nvim-treesitter')
@@ -21,6 +30,7 @@ return require('packer').startup({
 --    " Autocomplete
     use({ 
 	'ms-jpq/coq_nvim',
+	run = ':COQdeps',
     	config = function()
 		local coq_settings = {}
 		coq_settings["auto_start"] = "shut-up"
@@ -33,6 +43,12 @@ return require('packer').startup({
     use ('nvim-telescope/telescope.nvim')
 
 --    " Alpha
-    use ('goolord/alpha-nvim')
+    use {
+    'goolord/alpha-nvim',
+    requires = { 'kyazdani42/nvim-web-devicons' },
+    config = function ()
+        require'alpha'.setup(require'alpha.themes.startify'.config)
+    end
+}
 end,})
 
