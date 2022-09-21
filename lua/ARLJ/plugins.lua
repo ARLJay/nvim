@@ -54,6 +54,17 @@ return require('packer').startup({
     'goolord/alpha-nvim',
     config = [[ require('configs/alpha') ]],
 }
-   
+
+--    " VimTex
+ use ({
+   'lervag/vimtex',
+--   opt = true,
+   config = function()
+    vim.g.vimtex_view_method = 'zathura'
+    vim.g.vimtex_compiler_method = 'latexrun'
+    vim.g.tex_flavor = 'latex'
+ end,
+ })
+
 end,})
 

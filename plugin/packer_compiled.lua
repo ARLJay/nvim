@@ -125,18 +125,28 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/alistair/.local/share/nvim/site/pack/packer/start/vim-polyglot",
     url = "https://github.com/sheerun/vim-polyglot"
+  },
+  vimtex = {
+    config = { "\27LJ\2\nç\1\0\0\2\0\b\0\r6\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\0\0009\0\1\0'\1\5\0=\1\4\0006\0\0\0009\0\1\0'\1\a\0=\1\6\0K\0\1\0\nlatex\15tex_flavor\rlatexrun\27vimtex_compiler_method\fzathura\23vimtex_view_method\6g\bvim\0" },
+    loaded = true,
+    path = "/home/alistair/.local/share/nvim/site/pack/packer/start/vimtex",
+    url = "https://github.com/lervag/vimtex"
   }
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: coq_nvim
-time([[Config for coq_nvim]], true)
-try_loadstring("\27LJ\2\ni\0\0\2\0\a\0\t4\0\0\0'\1\1\0=\1\0\0'\1\3\0=\1\2\0006\1\4\0009\1\5\1=\0\6\1K\0\1\0\17coq_settings\6g\bvim\tnone\23display.icons.mode\fshut-up\15auto_start\0", "config", "coq_nvim")
-time([[Config for coq_nvim]], false)
+-- Config for: vimtex
+time([[Config for vimtex]], true)
+try_loadstring("\27LJ\2\nç\1\0\0\2\0\b\0\r6\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\0\0009\0\1\0'\1\5\0=\1\4\0006\0\0\0009\0\1\0'\1\a\0=\1\6\0K\0\1\0\nlatex\15tex_flavor\rlatexrun\27vimtex_compiler_method\fzathura\23vimtex_view_method\6g\bvim\0", "config", "vimtex")
+time([[Config for vimtex]], false)
 -- Config for: alpha-nvim
 time([[Config for alpha-nvim]], true)
  require('configs/alpha') 
 time([[Config for alpha-nvim]], false)
+-- Config for: coq_nvim
+time([[Config for coq_nvim]], true)
+try_loadstring("\27LJ\2\ni\0\0\2\0\a\0\t4\0\0\0'\1\1\0=\1\0\0'\1\3\0=\1\2\0006\1\4\0009\1\5\1=\0\6\1K\0\1\0\17coq_settings\6g\bvim\tnone\23display.icons.mode\fshut-up\15auto_start\0", "config", "coq_nvim")
+time([[Config for coq_nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
