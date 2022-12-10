@@ -80,6 +80,11 @@ _G.packer_plugins = {
     path = "/home/alistair/.local/share/nvim/site/pack/packer/start/alpha-nvim",
     url = "https://github.com/goolord/alpha-nvim"
   },
+  catppuccin = {
+    loaded = true,
+    path = "/home/alistair/.local/share/nvim/site/pack/packer/start/catppuccin",
+    url = "https://github.com/catppuccin/nvim"
+  },
   coq_nvim = {
     config = { "\27LJ\2\ni\0\0\2\0\a\0\t4\0\0\0'\1\1\0=\1\0\0'\1\3\0=\1\2\0006\1\4\0009\1\5\1=\0\6\1K\0\1\0\17coq_settings\6g\bvim\tnone\23display.icons.mode\fshut-up\15auto_start\0" },
     loaded = true,
@@ -116,6 +121,11 @@ _G.packer_plugins = {
     path = "/home/alistair/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["vim-be-good"] = {
+    loaded = true,
+    path = "/home/alistair/.local/share/nvim/site/pack/packer/start/vim-be-good",
+    url = "https://github.com/ThePrimeagen/vim-be-good"
+  },
   ["vim-css-color"] = {
     loaded = true,
     path = "/home/alistair/.local/share/nvim/site/pack/packer/start/vim-css-color",
@@ -127,7 +137,7 @@ _G.packer_plugins = {
     url = "https://github.com/sheerun/vim-polyglot"
   },
   vimtex = {
-    config = { "\27LJ\2\nç\1\0\0\2\0\b\0\r6\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\0\0009\0\1\0'\1\5\0=\1\4\0006\0\0\0009\0\1\0'\1\a\0=\1\6\0K\0\1\0\nlatex\15tex_flavor\rlatexrun\27vimtex_compiler_method\fzathura\23vimtex_view_method\6g\bvim\0" },
+    config = { "\27LJ\2\n<\0\0\2\0\4\0\0056\0\0\0009\0\1\0'\1\3\0=\1\2\0K\0\1\0\fzathura\23vimtex_view_method\6g\bvim\0" },
     loaded = true,
     path = "/home/alistair/.local/share/nvim/site/pack/packer/start/vimtex",
     url = "https://github.com/lervag/vimtex"
@@ -137,7 +147,7 @@ _G.packer_plugins = {
 time([[Defining packer_plugins]], false)
 -- Config for: vimtex
 time([[Config for vimtex]], true)
-try_loadstring("\27LJ\2\nç\1\0\0\2\0\b\0\r6\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\0\0009\0\1\0'\1\5\0=\1\4\0006\0\0\0009\0\1\0'\1\a\0=\1\6\0K\0\1\0\nlatex\15tex_flavor\rlatexrun\27vimtex_compiler_method\fzathura\23vimtex_view_method\6g\bvim\0", "config", "vimtex")
+try_loadstring("\27LJ\2\n<\0\0\2\0\4\0\0056\0\0\0009\0\1\0'\1\3\0=\1\2\0K\0\1\0\fzathura\23vimtex_view_method\6g\bvim\0", "config", "vimtex")
 time([[Config for vimtex]], false)
 -- Config for: alpha-nvim
 time([[Config for alpha-nvim]], true)

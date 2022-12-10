@@ -9,6 +9,11 @@ return require('packer').startup({
 	function(use)
 
     use('wbthomason/packer.nvim')
+
+    use ('ThePrimeagen/vim-be-good')
+
+    use { "catppuccin/nvim", as = "catppuccin" }
+
 --    " Better Syntax Support
     use ('sheerun/vim-polyglot')
 
@@ -53,18 +58,14 @@ return require('packer').startup({
     use {
     'goolord/alpha-nvim',
     config = [[ require('configs/alpha') ]],
-}
+       }
 
---    " VimTex
- use ({
-   'lervag/vimtex',
---   opt = true,
-   config = function()
-    vim.g.vimtex_view_method = 'zathura'
-    vim.g.vimtex_compiler_method = 'latexrun'
-    vim.g.tex_flavor = 'latex'
- end,
- })
+  use ({
+      'lervag/vimtex',
+      config = function()
+        vim.g.vimtex_view_method = 'zathura'
+      end,
+    })
 
 end,})
 
