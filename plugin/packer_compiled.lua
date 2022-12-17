@@ -81,6 +81,7 @@ _G.packer_plugins = {
     url = "https://github.com/goolord/alpha-nvim"
   },
   catppuccin = {
+    config = { "\27LJ\2\næ\1\0\0\3\0\v\0\0196\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\4\0'\2\5\0B\0\2\0029\0\6\0005\2\a\0B\0\2\0016\0\0\0009\0\b\0'\2\t\0B\0\2\0016\0\0\0009\0\b\0'\2\n\0B\0\2\1K\0\1\0) hi LineNr guibg=none guifg=#f9e2af \27colorscheme catppuccin\bcmd\1\0\1\27transparent_background\2\nsetup\15catppuccin\frequire\nmocha\23catppuccin_flavour\6g\bvim\0" },
     loaded = true,
     path = "/home/alistair/.local/share/nvim/site/pack/packer/start/catppuccin",
     url = "https://github.com/catppuccin/nvim"
@@ -149,14 +150,18 @@ time([[Defining packer_plugins]], false)
 time([[Config for vimtex]], true)
 try_loadstring("\27LJ\2\n<\0\0\2\0\4\0\0056\0\0\0009\0\1\0'\1\3\0=\1\2\0K\0\1\0\fzathura\23vimtex_view_method\6g\bvim\0", "config", "vimtex")
 time([[Config for vimtex]], false)
--- Config for: alpha-nvim
-time([[Config for alpha-nvim]], true)
- require('configs/alpha') 
-time([[Config for alpha-nvim]], false)
+-- Config for: catppuccin
+time([[Config for catppuccin]], true)
+try_loadstring("\27LJ\2\næ\1\0\0\3\0\v\0\0196\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\4\0'\2\5\0B\0\2\0029\0\6\0005\2\a\0B\0\2\0016\0\0\0009\0\b\0'\2\t\0B\0\2\0016\0\0\0009\0\b\0'\2\n\0B\0\2\1K\0\1\0) hi LineNr guibg=none guifg=#f9e2af \27colorscheme catppuccin\bcmd\1\0\1\27transparent_background\2\nsetup\15catppuccin\frequire\nmocha\23catppuccin_flavour\6g\bvim\0", "config", "catppuccin")
+time([[Config for catppuccin]], false)
 -- Config for: coq_nvim
 time([[Config for coq_nvim]], true)
 try_loadstring("\27LJ\2\ni\0\0\2\0\a\0\t4\0\0\0'\1\1\0=\1\0\0'\1\3\0=\1\2\0006\1\4\0009\1\5\1=\0\6\1K\0\1\0\17coq_settings\6g\bvim\tnone\23display.icons.mode\fshut-up\15auto_start\0", "config", "coq_nvim")
 time([[Config for coq_nvim]], false)
+-- Config for: alpha-nvim
+time([[Config for alpha-nvim]], true)
+ require('configs/alpha') 
+time([[Config for alpha-nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

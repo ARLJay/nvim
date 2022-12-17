@@ -12,7 +12,19 @@ return require('packer').startup({
 
     use ('ThePrimeagen/vim-be-good')
 
-    use { "catppuccin/nvim", as = "catppuccin" }
+    use {
+      "catppuccin/nvim", as = "catppuccin",
+      config = function()
+        vim.g.catppuccin_flavour = "mocha" -- latte, frappe, macchiato, mocha
+
+        require("catppuccin").setup({
+        		transparent_background = true,
+        	})
+        vim.cmd [[colorscheme catppuccin]]
+        
+        vim.cmd [[ hi LineNr guibg=none guifg=#f9e2af ]]
+      end
+    }
 
 --    " Better Syntax Support
     use ('sheerun/vim-polyglot')
